@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #7c3aed;
+  --color-brand-pink: #db2777;
+  --color-brand-blue: #2563eb;
+  --color-x: #f472b6;
+  --color-o: #60a5fa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cell-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.15s ease;
+}
+
+.winning-cell {
+  animation: pulse-win 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-win {
+  from { box-shadow: 0 0 0px 0px rgba(124, 58, 237, 0.4); }
+  to   { box-shadow: 0 0 18px 6px rgba(124, 58, 237, 0.7); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
