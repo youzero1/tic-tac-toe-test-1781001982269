@@ -13,5 +13,9 @@ export default defineConfig({
   build: {
     rollupOptions: { maxParallelFileOps: 2 },
     commonjsOptions: { transformMixedEsModules: true },
+    chunkSizeWarningLimit: 1000,
+  },
+  css: {
+    transformer: 'postcss',
   },
 });
