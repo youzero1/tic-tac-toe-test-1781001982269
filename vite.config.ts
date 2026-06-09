@@ -10,5 +10,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
   server: { host: "0.0.0.0", port: 5173, hmr: false },
-  build: { rollupOptions: { maxParallelFileOps: 2 } },
+  build: {
+    rollupOptions: { maxParallelFileOps: 2 },
+    commonjsOptions: { transformMixedEsModules: true },
+  },
 });
