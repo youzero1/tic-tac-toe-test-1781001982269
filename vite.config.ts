@@ -15,7 +15,4 @@ export default defineConfig({
     commonjsOptions: { transformMixedEsModules: true },
     chunkSizeWarningLimit: 1000,
   },
-  css: {
-    transformer: 'postcss',
-  },
 });
