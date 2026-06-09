@@ -14,5 +14,6 @@ export default defineConfig({
     rollupOptions: { maxParallelFileOps: 2 },
     commonjsOptions: { transformMixedEsModules: true },
     chunkSizeWarningLimit: 1000,
+    minify: false,
   },
 });
